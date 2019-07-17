@@ -1,0 +1,117 @@
+swan-icon {
+    display: inline-block;
+    font-size: 0;
+}
+.swan-icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "swan" !important;
+    speak: none;
+    font-style: 400;
+    font-weight: 400;
+    font-variant: 400;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #333;
+}
+.swan-icon-success,
+.swan-icon-info,
+.swan-icon-waiting,
+.swan-icon-success_no_circle,
+.swan-icon-radioSelected,
+.swan-icon-checkboxSelected {
+    color: #5C8AF5; 
+}
+.swan-icon-warn {
+    color: #F6635F;
+}
+.swan-icon-clear {
+    color: #999;
+}
+.swan-icon-radioUnselect,
+.swan-icon-checkboxUnselect {
+    color: #E0E0E0;
+}
+
+.swan-icon-success:before {
+    content: "\e619";
+}
+
+.swan-icon-cancel:before {
+    content: "\e626";
+}
+
+.swan-icon-info:before {
+    content: "\e61A";
+}
+.swan-icon-error:before {
+    content: "\e626";
+}
+
+.swan-icon-download:before,
+.swan-icon-myDownload:before {
+    content: "\e61C";
+}
+
+.swan-icon-personal:before {
+    content: "\e625";
+}
+
+.swan-icon-close:before {
+    content: "\e61E";
+}
+
+.swan-icon-top:before {
+    content: "\e61F";
+}
+
+.swan-icon-setting:before {
+    content: "\e621";
+}
+
+.swan-icon-search:before {
+    content: "\e61D";
+}
+
+.swan-icon-radioSelected:before {
+    content: "\e623";
+}
+
+.swan-icon-checkboxSelected:before {
+    content: "\e622";
+}
+
+.swan-icon-checkboxUnselect:before {
+    content: "\e620";
+}
+
+.swan-icon-radioUnselect:before {
+    content: "\e620";
+}
+
+.swan-icon-loadingWhite {
+    display: inline-block;
+    background: url(./images/loadingwhite.png);
+    background-size: cover;
+}
+
+.swan-icon-loadingGrey {
+    display: inline-block;
+    background: url(./images/loadinggrey.png);
+    background-size: cover;
+}
+
+.swan-icon-success_no_circle:before {
+    content: "\e618";
+}
+.swan-icon-warn:before {
+    content: "\e624";
+}
+.swan-icon-waiting:before {
+    content: "\e617";
+}
+.swan-icon-clear:before {
+    content: "\e61B";
+}

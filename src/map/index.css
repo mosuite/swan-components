@@ -1,0 +1,18 @@
+swan-map {
+    display: block;
+    width: 300px;
+    height: 225px;
+    min-width: 300px;
+    min-height: 225px;
+    margin: auto;
+    position: relative;
+}
+
+swan-map .slot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}

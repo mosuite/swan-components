@@ -1,0 +1,15 @@
+swan-animation-view {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+swan-animation-view .slot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}

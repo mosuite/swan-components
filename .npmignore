@@ -1,0 +1,15 @@
+*.swp
+.DS_Store
+coverage
+.vscode/*
+node_modules/
+npm-debug.log*
+package-lock.json
+
+test/
+webpack/
+build.sh
+.babelrc
+.eslintrc.js
+eagle.py
+.gitignore

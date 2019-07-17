@@ -1,0 +1,15 @@
+/**
+ * navigator default css
+ * @author sunbaixin(sunbaixin@baidu.com)
+ */
+
+swan-nav {
+    height: auto;
+    width: auto;
+    display: block;
+}
+
+.navigator-hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: .7;
+}

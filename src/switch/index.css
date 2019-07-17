@@ -1,0 +1,126 @@
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "weui";
+  src: url(../checkbox/font/weui.ttf) format('truetype');
+}
+
+swan-switch {
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+}
+
+swan-switch[hiddenl] {
+    display: none;
+}
+
+swan-switch .swan-switch-wrapper {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+            align-items: center;
+    vertical-align: middle;
+}
+
+swan-switch .swan-switch-input {
+    -webkit-appearance: none;
+            appearance: none;
+    position: relative;
+    width: 38px;
+    height: 23px;
+    margin-right: 5px;
+    border: .5px solid #BFBFBF;
+    outline: 0;
+    border-radius: 11.5px;
+    box-sizing: border-box;
+    background-color: #BFBFBF; 
+    transition: background-color .1s, border .1s;
+    display: none;
+}
+swan-switch .swan-switch-input[hiddenl="switch"] {
+    display: block;
+}
+
+swan-switch .swan-switch-input:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 37.25px;
+    height: 22.5px;
+    border-radius: 11.5px;
+    background-color: #EDEDED;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+swan-switch .swan-switch-input:after {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+swan-switch .swan-switch-input.swan-switch-input-checked {
+    border-color: #38F;
+    background-color: #38F;
+}
+
+swan-switch .swan-switch-input.swan-switch-input-checked:before {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+
+swan-switch .swan-switch-input.swan-switch-input-checked:after {
+    -webkit-transform: translateX(14px);
+            transform: translateX(14px);
+}
+
+swan-switch .swan-checkbox-input {
+    margin-right: 5px;
+    -webkit-appearance: none;
+            appearance: none;
+    outline: 0;
+    border: 1px solid #D1D1D1;
+    background-color: #FFF;
+    border-radius: 3px;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    color: #09BB07;
+    display: none;
+}
+
+swan-switch .swan-checkbox-input[hiddenl="checkbox"] {
+    display: block;
+}
+
+swan-switch .swan-checkbox-input.swan-checkbox-input-checked:before {
+    font: normal normal normal 14px/1 "weui";
+    content: "\EA08";
+    color: inherit;
+    font-size: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -48%) scale(0.73);
+            transform: translate(-50%, -48%) scale(0.73);
+
+}
+
+swan-switch .swan-checkbox-input.swan-checkbox-input-disabled {
+    background-color: #E1E1E1;
+}
+
+swan-switch .swan-checkbox-input.swan-checkbox-input-disabled:before {
+    color: #ADADAD;
+}

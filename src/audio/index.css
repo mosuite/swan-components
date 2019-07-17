@@ -1,0 +1,97 @@
+swan-audio.swan-audio-common {
+    display: block;
+    margin: 0;
+    position: relative;
+}
+swan-audio.swan-audio-common.hide {
+    display: none;
+}
+swan-audio .swan-audio-wrapper {
+    max-width: 100%;
+    min-width: 290px;
+    background: #FAFAFA;
+    border: 1px solid #E6E6E6;
+    border-radius: 3px;
+    padding: 13px 17px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+}
+swan-audio .swan-audio-left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    max-width: 80%;
+}
+swan-audio .swan-audio-left .imgwrap {
+    display: block;
+    position: relative;
+    background-color: #e6e6e6;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    width: 46px;
+    height: 46px;
+    z-index: 2;
+}
+swan-audio .swan-audio-left .imgwrap span {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -12px;
+}
+swan-audio .swan-audio-left .imgwrap span.pause {
+    background: url(./images/pause.png) no-repeat 50%;
+    background-size: 100% 100%;
+}
+swan-audio .swan-audio-left .imgwrap span.playing {
+    background: url(./images/playing.png) no-repeat 50%;
+    background-size: 100% 100%;
+}
+swan-audio .swan-audio-left .imgwrap img {
+    display: block;
+    width: 100%;
+}
+swan-audio .swan-audio-left .swan-audio-songinfo {
+    box-sizing: border-box;
+    padding: 5px 8px;
+    overflow: hidden;
+    -webkit-flex: 1;
+    flex: 1;
+    height: 46px;
+}
+swan-audio .swan-audio-songinfo .swan-audio-title {
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 0;
+    line-height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+swan-audio .swan-audio-songinfo .swan-audio-name {
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 4px;
+}
+swan-audio .swan-audio-right {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 0;
+    line-height: 16px;
+    width: 53px;
+    overflow: hidden;
+    text-align: right;
+}

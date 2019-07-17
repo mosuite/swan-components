@@ -1,0 +1,31 @@
+{
+    "presets": ["env"],
+    "env": {
+        "test": {
+            "plugins": [
+                "transform-class-properties",
+                ["transform-object-rest-spread", {"useBuiltIns": true}],
+                "transform-decorators-legacy",
+                "transform-object-assign",
+                ["istanbul", {
+                    "exclude": [
+                        "src/utils/**/*.js",
+                        "src/track-log/**/*.js",
+                        "src/ad/**/*.js",
+                        "src/page.js",
+                        "src/behaviorDecorators/*.js",
+                        "test/**/*.js"
+                    ]
+                }]
+            ]
+        },
+        "production": {
+            "plugins": [
+                "transform-class-properties",
+                ["transform-object-rest-spread", {"useBuiltIns": true}],
+                "transform-decorators-legacy",
+                "transform-object-assign"
+            ]
+        }
+    }
+}

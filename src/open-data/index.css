@@ -1,0 +1,45 @@
+swan-open-data {
+    font-size: 16px;
+}
+
+swan-open-data img {
+    width: 100%;
+    height: auto;
+}
+
+swan-open-data .avatar,
+swan-open-data .text {
+    display: inline-block;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    vertical-align: text-bottom;
+}
+
+swan-open-data .text {
+    width: auto;
+}
+
+swan-open-data .avatar:after {
+    display: block;
+    padding-top: 100%;
+    content: "\20";
+}
+
+swan-open-data[native="true"] {
+    visibility: hidden;
+}
+
+swan-open-data[isempty="true"] {
+    display: inline-block;
+    width: 0;
+}
+
+swan-cover-view swan-open-data[native="true"] {
+    white-space: normal;
+}
+
+.default-avatar {
+    background-image: url(./images/headImg.png);
+}

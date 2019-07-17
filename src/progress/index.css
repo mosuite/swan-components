@@ -1,0 +1,21 @@
+swan-progress {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.progress-bar {
+    -webkit-flex: 1;
+            flex: 1;
+}
+.progress-inner-bar {
+    width: 0;
+    height: 100%;
+}
+.progress-info {
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 2em;
+    margin-left: 15px;
+    font-size: 16px;
+}

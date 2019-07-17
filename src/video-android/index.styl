@@ -1,0 +1,367 @@
+@require './variable.styl'
+
+@font-face
+    font-family: 'swanvideo'
+    src: url('./font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('./font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('./font/iconfont.svg') format('svg') /* iOS 4.1- */
+
+.swan-video-i-play,
+.swan-video-i-pause,
+.swan-video-i-fullscreen,
+.swan-video-i-fullscreen-exit,
+.swan-video-i-brightness,
+.swan-video-i-brightness-lower,
+.swan-video-i-voice-muted,
+.swan-video-i-voice,
+.swan-video-i-forward,
+.swan-video-i-backward,
+.swan-video-i-unlock,
+.swan-video-i-replay,
+.swan-video-i-refresh,
+.swan-video-i-audio-muted,
+.swan-video-i-lock,
+.swan-video-i-danmu-disabled,
+.swan-video-i-audio,
+.swan-video-i-danmu-enabled,
+.swan-video-i-loading,
+.swan-video-i-back
+    font-family: 'swanvideo'
+    speak: none
+    font-size: 16px
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+
+.swan-video-i-play:before
+    content: '\e607'
+
+.swan-video-i-pause:before
+    content: '\e610'
+
+.swan-video-i-fullscreen:before
+    content: '\e60b'
+
+.swan-video-i-fullscreen-exit:before
+    content: '\e60f'
+
+.swan-video-i-brightness:before
+    content: '\e615'
+
+.swan-video-i-brightness-lower:before
+    content: '\e612'
+
+.swan-video-i-forward:before
+    content: '\e60c'
+
+.swan-video-i-backward:before
+    content: '\e60a'
+
+.swan-video-i-lock:before
+    content: '\e616'
+
+.swan-video-i-unlock:before
+    content: '\e60e'
+
+.swan-video-i-replay:before
+    content: '\e613'
+
+.swan-video-i-refresh:before
+    content: '\e60d'
+
+.swan-video-i-voice:before,
+.swan-video-i-audio:before
+    content: '\e614'
+
+.swan-video-i-voice-muted:before,
+.swan-video-i-audio-muted:before
+    content: '\e611'
+
+.swan-video-i-danmu-disabled:before
+    content: '\e608'
+
+.swan-video-i-danmu-enabled:before
+    content: '\e606'
+
+.swan-video-i-loading:before
+    content: '\e605'
+
+.swan-video-i-back:before
+    content: '\e609'
+
+video[type='video'],
+swan-video
+    position: relative
+    display: block
+    width: 300px
+    height: 225px
+    margin: auto
+    background: #5b5b5b
+    background-repeat: no-repeat
+    background-position: 50% 50%
+
+.swan-android-video
+    overflow: hidden
+
+    >video
+        width: 100%
+        height: 100%
+        background: #000
+
+.swan-video-circle-btn
+    width: $-swan-video-circel-btn-size
+    height: @width
+    text-align: center
+    border-radius: 100%
+    background-color: rgba(0, 0, 0, .4)
+
+    .swan-video-btn-icon
+        display: block
+        color: #fff
+        font-size: 23px
+        line-height: $-swan-video-circel-btn-size
+
+.swan-video-controls
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: $-swan-video-control-zIndex
+    background-color: transparent
+    line-height: 1
+
+.swan-video-play-btn
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 1
+    transform: translate(-50%, -50%)
+
+.swan-video-lock-btn
+    position: absolute
+    top: 50%
+    left: $-swan-video-gap
+    z-index: 1
+    height: 36px
+    width: 36px
+    transform: translate(0, -50%)
+
+    .swan-video-btn-icon
+        line-height: 36px
+        color: #fff
+        font-size: 24px
+
+.swan-video-gesture-mask
+    position: absolute
+    top: 0
+    bottom: $-swan-video-bottom-control-height
+    left: 0
+    right: 0
+    z-index: 1
+    background-color: transparent
+
+.swan-video-bottom-control
+    position: absolute
+    z-index: 1
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 0 $-swan-video-gap
+    display: flex
+    align-items: center
+    background-image: linear-gradient(-180deg, #000 0%, rgba(0, 0, 0, .5) 100%)
+
+.swan-video-bottom-op-btn
+    font-size: 19px
+    margin-right: 17px
+    color: #fff
+
+.swan-video-bottom-op-btn:last-child
+    margin-right: 0
+
+.swan-video-progress-bar,
+.swan-video-progress-bar-placeholder
+    flex: 1
+    display: flex
+    margin: 0 15px 0 0
+    align-items: center
+    color: #fff
+    font-size: 12px
+
+.swan-video-progress-bar-placeholder
+    opacity: 0
+    height: $-swan-video-bottom-control-height
+
+.swan-video-progress-bar-inner
+    flex: 1
+    padding: 17px 12px
+    user-select: none
+
+.swan-video-progress-slider
+    position: relative
+    height: 1px
+    background-color: rgba(255, 255, 255, .5)
+
+.swan-video-progress-slider-track
+    height: 100%
+    background-color: #3c76ff
+
+.swan-video-progress-slider-handler
+    position: absolute
+    top: 50%
+    margin-top: -5px
+    margin-left: -5px
+    width: 10px
+    height: 10px
+    border-radius: 100%
+    background-color: #fff
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2)
+    transition: transform ease .3s
+
+.swan-video-progress-slider-handler-focus
+    transform: scale(1.5)
+
+@keyframes swanVideoSpinner
+	0%
+        transform: translate(-50%, -50%) rotate(0)
+
+    100%
+        transform: translate(-50%, -50%) rotate(360deg)
+
+.swan-video-spinner
+    position: absolute
+    left: 50%
+    top: 50%
+    z-index: 1
+    transform: translate(-50%, -50%)
+    color: #fff
+    font-size: 42px
+    line-height: 1
+    animation: swanVideoSpinner 2s infinite linear
+
+.swan-video-progress-state,
+.swan-video-voice-light-state
+    position: absolute
+    left: 50%
+    top: 50%
+    z-index: $-swan-video-max-zIndex
+    padding: 15px 23px
+    box-sizing: border-box
+    transform: translate(-50%, -50%)
+    background: rgba(0, 0, 0, .8)
+    border-radius: 7px
+    text-align: center
+    color: #fff
+    font-size: 12px
+    line-height: 1
+
+.swan-video-voice-light-value
+    min-width: 36px
+    margin-top: 10px
+
+.swan-video-up-state-icon
+    display: block
+    font-size: 26px
+
+.swan-video-progress-state
+    .swan-video-time-separator,
+    .swan-video-total-time
+        color: #989898
+
+    .swan-video-progress-bar
+        margin: 0 0 3px
+
+    .swan-video-progress-bar-inner
+        padding: 0
+
+    .swan-video-progress-slider
+        height: 2px
+        background-color: #e0e0e0
+
+    .swan-video-progress-slider-track
+        background-color: #0096ff
+
+    .swan-video-time-info
+        margin: 10px 0 15px
+        font-size: 12px
+
+.swan-video-play-result-state,
+.swan-video-network-state
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: $-swan-video-control-zIndex + 1
+    background: rgba(0, 0, 0, .7)
+    line-height: 1
+
+.swan-video-play-result-state-tip
+    margin-top: 8px
+    text-align: center
+    color: #fff
+    font-size: 12px
+
+.swan-video-network-tip
+    margin-bottom: 10px
+    color: #fff
+    font-size: 14px
+
+.swan-video-play-go-on
+    height: 30px
+    padding: 0 10px
+    line-height: @height
+    color: #fff
+    font-size: 14px
+    text-align: center
+    background: transparent
+    border: 1px solid #fff
+
+    &:active
+        color: rgba(255, 255, 255, .6)
+
+.swan-video-danmu-wrap
+    position: absolute
+    top: 0
+    bottom: $-swan-video-bottom-control-height
+    left: 0
+    z-index: 1
+    width: 100%
+    line-height: 1
+    background: transparent
+    >canvas
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+
+/* 全屏左上角返回按钮样式 层级最高 */
+.swan-video-back-btn
+    position: absolute
+    z-index: $-swan-video-max-zIndex
+    left: $-swan-video-gap - 10px
+    top: 0
+    padding: 10px
+    color: #fff
+    font-size: 20px
+    line-height: 1
+
+.swan-video-slot
+    position: absolute
+    z-index: $-swan-video-control-zIndex
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: transparent
+    pointer-events: none

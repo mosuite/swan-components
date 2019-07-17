@@ -1,0 +1,9 @@
+swan-movable-view {
+    transition-timing-function: ease-out;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

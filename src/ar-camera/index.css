@@ -1,0 +1,14 @@
+swan-ar-camera {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+swan-ar-camera .slot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,56 @@
+swan-input {
+    display: block;
+    height: 1.4em;
+    min-height: 1.4em;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    color: #333;
+    flex: 1 1 auto;
+    font-family: UICTFontTextStyleBody;
+}
+
+swan-input .swan-input-main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: inherit;
+}
+
+swan-input[disabled] {
+    color: #666;
+}
+
+swan-input .input-value,
+swan-input .input-computed {
+    position: absolute;
+    padding: inherit;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    text-overflow: inherit;
+    white-space: nowrap;
+    font-size: inherit;
+}
+
+swan-input .input-placeholder {
+    color: #ccc;
+    flex: 1;
+    font-size: inherit;
+}
+
+swan-input .input-placeholder[showplaceholder="false"] {
+    visibility: hidden !important;
+}
+
+swan-input .input-stylecompute {
+    display: none !important;
+}

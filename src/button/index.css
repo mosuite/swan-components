@@ -1,0 +1,178 @@
+@media (-webkit-device-pixel-ratio: 1.5) {
+    swan-button:after {
+        width: 150%;
+        height: 150%;
+        -webkit-transform: scale(0.66667);
+                transform: scale(0.66667);
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+    swan-button:after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+    }
+}
+
+@media (-webkit-device-pixel-ratio: 3) {
+    swan-button:after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+                transform: scale(0.33333);
+    }
+}
+
+swan-button {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.4444;
+    border-radius: 4px;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    color: #000;
+    background-color: #fff;
+}
+
+swan-button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #333;
+    pointer-events: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+}
+
+swan-button[type="primary"]:after,
+swan-button[type="warn"]:after {
+    content: none;
+}
+
+swan-button[type="primary"] {
+    color: #fff;
+    background-color: #3c76ff;
+}
+
+swan-button[type="warn"] {
+    color: #fff;
+    background-color: #f7534f;
+}
+
+swan-button[size="default"]:after {
+    border-radius: 12px;
+}
+/* radius ios*/
+swan-button.swan-button-radius-ios {
+    border-radius: 5px;
+}
+swan-button.swan-button-radius-ios:after {
+    border-radius: 15px;
+}
+swan-button[size="mini"] {
+    display: inline-block;
+    line-height: 1.9231;
+    font-size: 13px;
+}
+
+/* plain */
+swan-button[plain="true"] {
+    color: #333;
+    background-color: transparent;
+    border: 1px solid #333;
+}
+
+swan-button[type="primary"][plain="true"] {
+    color: #3c76ff;
+    border: 1px solid #3c76ff;
+}
+
+swan-button[type="warn"][plain="true"] {
+    color: #f7534f;
+    border: 1px solid #f7534f;
+}
+
+/* plain="true"清空伪类边框 */
+swan-button[plain="true"]::after {
+    border: none;
+}
+
+/* hover */
+.button-hover {
+    opacity: .3;
+}
+
+/* loading */
+swan-button[loading="true"]::before {
+    content: " ";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 12px;
+    vertical-align: middle;
+    -webkit-animation: swan-button-loading-animate 1s linear infinite;
+            animation: swan-button-loading-animate 1s linear infinite;
+    background: transparent url(./images/buttonloadgrey.png) no-repeat;
+    background-size: 100% 100%;
+}
+swan-button[loading="true"][type="warn"]::before,
+swan-button[loading="true"][type="primary"]::before {
+    background-image: url(./images/buttonloadwhite.png);
+}
+
+/* disabled */
+swan-button.swan-button-disabled {
+    opacity: .3;
+}
+swan-button[type="primary"].swan-button-disabled {
+    background-color: #3c76ff;
+}
+swan-button[type="warn"].swan-button-disabled {
+    background-color: #f7534f;
+}
+swan-button[type="primary"][plain="true"].swan-button-disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+swan-button[type="warn"][plain="true"].swan-button-disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@-webkit-keyframes swan-button-loading-animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes swan-button-loading-animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

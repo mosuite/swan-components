@@ -1,0 +1,70 @@
+{
+    "name": "@baidu/swan-components",
+    "version": "3.60.1",
+    "description": "swan的所有组件集合",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "webpack --config webpack/webpack.prod.conf.js",
+        "build:watch": "webpack --config webpack/webpack.prod.conf.js --watch",
+        "test": "karma start ./test/karma.conf.js --single-run",
+        "test-local": "karma start ./test/karma.conf.js --reporters spec,coverage,html --single-run",
+        "test-local:watch": "karma start ./test/karma.conf.js --reporters spec,coverage,html --no-single-run",
+        "prepublishOnly": "/usr/bin/env node ./tools/noPublish.js",
+        "preinstall": "sh commit-msg-setting.sh"
+    },
+    "pre-push": [
+        "test-local"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://houyu01@icode.baidu.com:8235/baidu/baiduapp/swan-components"
+    },
+    "keywords": [
+        "swan",
+        "components"
+    ],
+    "dependencies": {
+        "fs-finder": "^1.8.1",
+        "lodash.clonedeep": "^4.5.0",
+        "intersection-observer": "^0.5.1"
+    },
+    "devDependencies": {
+        "@tweenjs/tween.js": "^17.2.0",
+        "autoprefixer": "^9.5.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-istanbul": "^4.1.6",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "babel-plugin-transform-object-assign": "^6.22.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "crypto": "^1.0.1",
+        "css-loader": "^0.28.7",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "file-loader": "^1.1.11",
+        "happypack": "^5.0.0",
+        "html-loader": "^0.5.5",
+        "jasmine-core": "^3.1.0",
+        "karma": "^2.0.2",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-coverage": "^1.1.2",
+        "karma-jasmine": "^1.1.2",
+        "karma-sourcemap-loader": "^0.3.7",
+        "karma-spec-reporter": "0.0.32",
+        "karma-webpack": "^3.0.0",
+        "karma-html-reporter": "^0.2.7",
+        "postcss-loader": "^3.0.0",
+        "pre-push": "^0.1.1",
+        "san": "3.6.15",
+        "sinon": "^6.1.3",
+        "style-loader": "^0.19.0",
+        "stylus": "^0.54.5",
+        "stylus-loader": "^3.0.2",
+        "url-loader": "^0.6.2",
+        "webpack": "^3.8.1",
+        "webpack-merge": "^4.1.3"
+    },
+    "author": "houyu (houyu01@baidu.com)",
+    "license": "MIT"
+}

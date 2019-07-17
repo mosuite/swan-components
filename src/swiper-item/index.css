@@ -1,0 +1,5 @@
+swan-swiper-item {
+    display: block;
+    overflow: hidden;
+    will-change: transform;
+}

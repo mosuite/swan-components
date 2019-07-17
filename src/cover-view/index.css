@@ -1,0 +1,39 @@
+swan-cover-view {
+    display: block;
+    line-height: 1.2;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: auto;
+    font-size: 16px;
+    visibility: hidden;
+    -webkit-transition: none !important;
+            transition: none !important;
+}
+
+swan-cover-view[hidden] {
+    display: none;
+}
+
+swan-cover-view .swan-cover-view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-overflow: inherit;
+    overflow: inherit;
+    white-space: inherit;
+    -webkit-align-items: inherit;
+            align-items: inherit;
+    -webkit-justify-content: inherit;
+            justify-content: inherit;
+    -webkit-flex-direction: inherit;
+            flex-direction: inherit;
+}
+
+swan-cover-view .computed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    /* -webkit-transition: none !important;
+            transition: none !important; */
+}
